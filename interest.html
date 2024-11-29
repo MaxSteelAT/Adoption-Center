@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- SEO -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View the kittens you've added to your interest list.">
+  <meta name="keywords" content="adoption, kittens, interest list">
+  <meta name="author" content="Your Name">
+  <meta property="og:title" content="Your Interest List">
+  <meta property="og:description" content="See the kittens you've marked as favorites.">
+  <meta property="og:image" content="assets/og-image-interest.jpg">
+  <meta property="og:url" content="https://your-github-username.github.io/project/interest.html">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Adopt Kittens - Your Interest List</title>
+</head>
+<body class="bg-gray-100">
+  <header class="text-center py-4 bg-green-500 text-white">
+    <h1 class="text-3xl font-bold">Your Interest List</h1>
+  </header>
+
+  <main class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4 p-4" id="interest-list">
+    <!-- JavaScript dynamically injects interest list here -->
+  </main>
+
+  <script src="interest.js"></script>
+</body>
+</html>
