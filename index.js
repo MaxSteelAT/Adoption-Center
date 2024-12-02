@@ -34,7 +34,9 @@ function renderKittens(data) {
   data.forEach((kitten) => {
     container.innerHTML += `
       <div class="p-4 border rounded shadow-lg bg-white">
+      <a href="details.html?id=${kitten.id}&url=${kitten.url}">
         <img src="${kitten.url}" alt="Kitten" class="w-full rounded">
+      </a>
         <button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded" onclick="addToInterest('${kitten.id}', '${kitten.url}')">
           Add to Interest
         </button>

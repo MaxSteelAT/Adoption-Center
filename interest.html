@@ -12,6 +12,7 @@
   <meta property="og:image" content="assets/og-image-interest.jpg">
   <meta property="og:url" content="https://your-github-username.github.io/project/interest.html">
   <meta property="og:type" content="website">
+  <link rel="stylesheet" href="assets/style.css">
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 
   <!-- Tailwind CSS (CDN) -->
@@ -19,9 +20,15 @@
   <title>Adopt Kittens - Your Interest List</title>
 </head>
 <body class="bg-gray-100">
-  <header class="text-center py-4 bg-green-500 text-white">
+  <header class="text-center py-12 text-white">
     <h1 class="text-3xl font-bold">Your Interest List</h1>
+    <p>Find your perfect furry friend!</p>
   </header>
+  <section class="text-center py-4">
+    <a href="index.html" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+      Home
+    </a>
+  </section>
 
   <main class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4 p-4" id="interest-list">
     <!-- JavaScript dynamically injects interest list here -->
