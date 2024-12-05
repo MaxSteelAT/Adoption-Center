@@ -1,1 +1,2 @@
-![Captura de pantalla 2024-11-29 151630](https://github.com/user-attachments/assets/26940146-fc96-4b39-b460-4e55be76b362)
+
+![image](https://github.com/user-attachments/assets/51f30de3-27b1-4e4e-acd4-54cdfefedd09)
