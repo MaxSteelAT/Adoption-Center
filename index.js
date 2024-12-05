@@ -69,7 +69,24 @@ function addToInterest(id, url) {
   // 5. Ahora, pasamos ese valor nuevo a almacenar en LocalStorage con el mismo nombre de "interestList".
   localStorage.setItem("interestList", interestListString);
   // 6. Le mostramos un mensaje que se almaceno correctamente.
-  alert("Kitten added to interest list!");
+  new Notify ({
+    status: 'success',
+    title: 'Added kitten',
+    text: 'Look at your kitty list 🐈‍⬛',
+    effect: 'fade',
+    speed: 300,
+    customClass: '',
+    customIcon: '',
+    showIcon: true,
+    showCloseButton: true,
+    autoclose: true,
+    autotimeout: 3000,
+    notificationsGap: null,
+    notificationsPadding: null,
+    type: 'outline',
+    position: 'right top',
+    customWrapper: '',
+  })
 }
 
 

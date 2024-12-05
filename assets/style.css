@@ -1,4 +1,50 @@
-header{
-  background-color: #50A;
+body{
+  background-image: linear-gradient(to right top, #fffff9, #fffbf7, #fff8f7, #fbf5f7, #f5f3f7);
 }
 
+header{
+  background-color: #50A;
+  display: flex;
+}
+
+.title{
+font-size: 35px;
+margin-bottom: 20px;
+}
+
+#information-container{
+  display: flex;
+  margin: 30px;
+}
+
+#text{
+  margin-left: 30px;
+  margin-top: 65px;
+}
+
+#avatar{
+  width: 1000px;
+  border-radius: 130px;
+  border-width: 5px;
+  border-style: double;
+  border-color: #50A;
+}
+
+#formattedDate{
+  margin-top: 20px;
+  text-align: end;
+}
+
+#logo{
+  width: 40%;
+}
+
+/*Calendar*/
+#calendar-container{
+  display: flex;
+  justify-content: center;
+}
+#calendar{
+  width: 80%;
+  margin: 30px;
+}

@@ -21,7 +21,12 @@
   <meta name="twitter:description" content="Find your perfect furry friend. Adopt kittens and give them a home!">
   <meta name="twitter:image" content="assets/og-image.jpg">
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+
   <link rel="stylesheet" href="assets/style.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-notify/dist/simple-notify.css" />
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/simple-notify/dist/simple-notify.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.1/lottie.min.js"></script>
 
@@ -29,15 +34,97 @@
 
 <body class="bg-gray-100">
   <header class="text-center py-12 text-white">
-    <h1 class="text-3xl font-bold">Adopt Kittens</h1>
-    <p>Find your perfect furry friend!</p>
+    <div id="logo">
+      <img id="gift" src="img/Logo.gif" alt="">
+    </div>
+    <div id="information">
+      <h1 class="text-3xl font-bold">Adopt Kittens</h1>
+      <p>Find your perfect furry friend!</p>
+      <h4 id="formattedDate">Today is: </h4>
+    </div>
   </header>
-  <section class="text-center py-4">
-    <a href="interest.html" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-      Your kittens
-    </a>
-  </section>
 
+  <nav class="bg-gray-800">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <!-- Mobile menu button-->
+          <button type="button"
+            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            aria-controls="mobile-menu" aria-expanded="false">
+            <span class="absolute -inset-0.5"></span>
+            <span class="sr-only">Open main menu</span>
+            <!--
+              Icon when menu is closed.
+  
+              Menu open: "hidden", Menu closed: "block"
+            -->
+            <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true" data-slot="icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <!--
+              Icon when menu is open.
+  
+              Menu open: "block", Menu closed: "hidden"
+            -->
+            <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true" data-slot="icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex shrink-0 items-center">
+            <img class="h-8 w-auto" src="img/mascota.png" alt="Your Company">
+          </div>
+          <div class="hidden sm:ml-6 sm:block">
+            <div class="flex space-x-4">
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+              <a href="index.html" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
+                aria-current="page">Home</a>
+              <a href="interest.html"
+                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Your Kittens</a>
+              <a href="#"
+                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
+              <a href="calendar.html"
+                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="sm:hidden" id="mobile-menu">
+      <div class="space-y-1 px-2 pb-3 pt-2">
+        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+        <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+          aria-current="page">Dashboard</a>
+        <a href="#"
+          class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
+        <a href="#"
+          class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
+        <a href="#"
+          class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
+      </div>
+    </div>
+  </nav>
+
+  <article id="information-container">
+    <div id="icon">
+      <img id="avatar" src="img/portada.jpg" alt="">
+    </div>
+    <div id="text">
+      <h1 class="title">Un poco sobre nosotros</h1>
+      <p>1. El gato doméstico más antiguo que se conoce existió hace 9.500 años
+        Cuela este dato en tu próxima cena con amigos: alucinarán. ¿Sabías que en un principio se pensaba que los
+        egipcios habían domesticado al gato? Pues no. Resulta que, en 2004, unos arqueólogos franceses descubrieron en
+        Chipre la tumba de un gato de 9.500 años de antigüedad. Esto lo convierte en el gato doméstico más antiguo que
+        se conoce, y es anterior al arte egipcio en el que aparecen gatos... en más de 4.000 años.
+      </p>
+    </div>
+  </article>
 
   <main id="kittens" class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4 p-4">
     <!-- JavaScript dynamically injects kittens here -->
@@ -45,6 +132,11 @@
   <div id="loading" class="hidden"></div>
 
   <!-- <script src="src/js/main.js"></script> -->
+  <lottie-player src="https://lottie.host/c58f44ce-3139-4435-8f6a-b84dfe5a2810/KqXBizxRSA.json" background="##ffffff"
+    speed="1" style="width: 300px; height: 300px" loop controls autoplay direction="1" mode="normal">
+  </lottie-player>
+  <script src="https://momentjs.com/downloads/moment.min.js"></script>
+  <script src="moment.js"></script>
   <script src="index.js"></script>
 </body>
 
